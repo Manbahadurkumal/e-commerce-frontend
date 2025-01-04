@@ -5,7 +5,7 @@ import SocketExample from "../pages/landing/socket-eg.page";
 import LoginPage from "../pages/auth/login";
 import RegisterPage from "../pages/auth/register";
 import Logout from "../pages/auth/logout";
-
+import ActivatePage from "../pages/auth/activate";
 import HomeLayout from "../pages/layouts";
 import AdminLayout from "../pages/layouts/admin";
 // const AdminLayout = lazy(() => import("../pages/layouts/admin"))
@@ -47,6 +47,7 @@ const RoutingConfig = () =>{
     }
     useEffect(() => {
         const token = localStorage.getItem("accessToken") || null
+
         if(token) {
             getLoggedInUser()
         }else{
@@ -69,9 +70,10 @@ const RoutingConfig = () =>{
                     <Route index element={<LandingPage />}></Route>
                     <Route path="login" element={<LoginPage />}></Route>
                     <Route path="socket" element={<SocketExample />}></Route>
-                    <Route path="logout" element={<Logout />}></Route>
+                    <Route path="activate/:activationToken" element={<ActivatePage /> }></Route>
 
                     <Route path="register" element={<RegisterPage />}></Route>
+                    <Route path="logout" element={<Logout />}></Route>
 
                     <Route path="*" element={<>Error Page</>}></Route>
                 </Route>
