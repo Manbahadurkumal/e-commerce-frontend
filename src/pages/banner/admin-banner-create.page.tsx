@@ -35,7 +35,7 @@ const AdminBannerCreate = () => {
                 status: data.status.value
             }
             // api call
-            const response = await axiosInstance.post('/banner', mappedData, {
+            await axiosInstance.post('/banner', mappedData, {
               headers: {
                 Authorization: "Bearer " + localStorage.getItem('accessToken'),
                 "Content-Type": "multipart/form-data"

@@ -41,7 +41,7 @@ const PaginationComponent = ({
                 }
                 {
                   [...Array(pagination.totalPages)].map(
-                  (item: any, index: number) => (
+                  (_,index: number) => (
                     <li key={index}>
                       <a
                         href="#"

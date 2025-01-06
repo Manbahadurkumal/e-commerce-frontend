@@ -71,7 +71,6 @@ const RoutingConfig = () =>{
                     <Route path="login" element={<LoginPage />}></Route>
                     <Route path="socket" element={<SocketExample />}></Route>
                     <Route path="activate/:activationToken" element={<ActivatePage /> }></Route>
-
                     <Route path="register" element={<RegisterPage />}></Route>
                     <Route path="logout" element={<Logout />}></Route>
 

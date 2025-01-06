@@ -1,9 +1,8 @@
 import { useContext, useEffect } from "react"
 import axiosInstance from "../../../config/axios.config"
 import AuthContext from "../../../context/auth.context"
-import { Navigate, useNavigate } from "react-router-dom"
+import {useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
-import RegisterPage from "../register"
 import LandingPage from "../../landing/landing.page"
 
 
@@ -19,7 +18,7 @@ const Logout = () =>{
             localStorage.removeItem("persist: root")
             auth.loggedInUser = null
             toast.success("You are logout successfully")
-            navigate("/")
+            navigate('/')
         }
         auth.loggedInUser = null
     }catch(exception){
@@ -29,13 +28,12 @@ const Logout = () =>{
     }}
     useEffect(()=>{
         if(auth.loggedInUser){
-            auth.loggedInUser = null
             localStorage.removeItem("accessToken")
             localStorage.removeItem("refreshToken")
             localStorage.removeItem("persist:root")
-            
+            auth.loggedInUser = null
             toast.success("You are logout successfully")
-            navigate("/")
+            navigate('/')
         }
     }, [auth, navigate])
     auth.loggedInUser = null

@@ -11,7 +11,7 @@ import { helloWorld } from "../../reducer/banner.reducer";
 
 const PER_PAGE_LIMIT = 15;
 const AdminBanner = () => {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // trigger/fire
