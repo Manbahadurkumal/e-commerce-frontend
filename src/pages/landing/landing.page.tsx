@@ -5,10 +5,12 @@ import {
   SingleProductGrid, 
   HomeSectionTitle
 } from "../../components/common";
+import { toast } from "react-toastify";
 // receive and create
 // props
 // state   ===> hook-> can be used in functional
 const LandingPage = (): ReactNode => {  
+  toast.success("Manish")
   return (
     <> 
       <HomeBannerComponent />
