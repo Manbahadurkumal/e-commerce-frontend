@@ -17,7 +17,7 @@ const ActivatePage = () =>{
     }catch(exception){
         console.log(exception)
     }}
-    return (<><LoginPage/></>)
+    return (<LoginPage/>)
 }
 export default ActivatePage
 
